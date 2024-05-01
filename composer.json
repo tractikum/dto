@@ -1,0 +1,22 @@
+{
+  "name": "tractikum/dto",
+  "description": "DTO for the application",
+  "keywords": ["tractikum", "dto"],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Tractikum",
+      "email": "email@example.com"
+    }
+  ],
+  "require": {
+    "php": "^8.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tractikum\\DTO\\": "src/"
+    }
+  }
+}
