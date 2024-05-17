@@ -62,6 +62,20 @@ class NotificationData implements Castable
         return ['title' => $this->title, 'body' => $this->body];
     }
 
+    public function getContent(): string
+    {
+        if ($this->type === NotificationType::Invitation) {
+            return '';
+        }
+
+        return implode('. ', [$this->title ?? '', $this->body ?? '']);
+    }
+
+    public function __toString(): string
+    {
+        return $this->getContent();
+    }
+
     public static function castUsing(array $arguments): CastsAttributes
     {
         return new class implements CastsAttributes
